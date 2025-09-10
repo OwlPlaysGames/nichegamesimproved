@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎮 Game Hub</h1>
+    <input type="text" id="searchBar" placeholder="Search games...">
+  </header>
+
+  <main>
+    <section>
+      <h2>🔥 Popular</h2>
+      <div class="game-grid" id="popular">
+        <a href="games/slope/index.html" class="game-card">Slope</a>
+        <a href="games/1v1lol/index.html" class="game-card">1v1.lol</a>
+        <a href="games/run3/index.html" class="game-card">Run 3</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🆕 Newly Added</h2>
+      <div class="game-grid" id="new">
+        <a href="games/retrobowl/index.html" class="game-card">Retro Bowl</a>
+        <a href="games/minecraft/index.html" class="game-card">Minecraft Classic</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <button id="seeAll">See All Games</button>
+  </footer>
+
+  <script>
+    // Simple search filter
+    const searchBar = document.getElementById('searchBar');
+    searchBar.addEventListener('input', () => {
+      const filter = searchBar.value.toLowerCase();
+      document.querySelectorAll('.game-card').forEach(card => {
+        card.style.display = card.textContent.toLowerCase().includes(filter) ? '' : 'none';
+      });
+    });
+
+    // See all button
+    document.getElementById('seeAll').addEventListener('click', () => {
+      window.location.href = "all-games.html"; // Make this page later
+    });
+  </script>
+</body>
+</html>

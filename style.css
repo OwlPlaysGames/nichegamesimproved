@@ -1,0 +1,86 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #f4f4f4;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+#searchBar {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Section */
+section {
+  margin: 30px 0;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* Game grid */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.game-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  background: #2c2c2c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#seeAll {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  background: #ff4747;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#seeAll:hover {
+  background: #e63b3b;
+}
