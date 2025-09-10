@@ -14,7 +14,7 @@ body, html {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  background: url('images/Images/bryan-goff-RF4p4rTM-2s-unsplash.jpg') no-repeat center center;
+  background: url('images/bryan-goff-RF4p4rTM-2s-unsplash.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -182,5 +182,6 @@ footer {
   background: rgba(255,0,255,0.8);
   box-shadow: 0 0 15px #d97eff, 0 0 25px #a832f8;
 }
+
 
 
