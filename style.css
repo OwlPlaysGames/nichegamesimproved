@@ -5,31 +5,45 @@
   padding: 0;
 }
 
-body {
+/* Full-page background */
+body, html {
+  height: 100%;
   font-family: Arial, sans-serif;
-  background: #121212;
   color: #f4f4f4;
-  padding: 20px;
+  background: url('your-background.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers main container horizontally */
+  justify-content: flex-start;
+}
+
+/* Container for frosted-glass effect */
+header, main, footer {
+  width: 90%;
   max-width: 900px;
-  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  padding: 20px 30px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 /* Header */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 header h1 {
   margin-bottom: 10px;
 }
 
 #searchBar {
-  width: 100%;
+  width: 80%;
+  max-width: 500px;
   padding: 12px;
   border-radius: 10px;
   border: none;
   font-size: 16px;
+  display: block;
+  margin: 0 auto; /* centers search bar */
 }
 
 /* Section */
@@ -47,10 +61,11 @@ section h2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 15px;
+  justify-items: center; /* centers cards inside each grid cell */
 }
 
 .game-card {
-  background: #1f1f1f;
+  background: rgba(31,31,31,0.7); /* slightly transparent for frosted effect */
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -61,7 +76,7 @@ section h2 {
 
 .game-card:hover {
   transform: translateY(-5px);
-  background: #2c2c2c;
+  background: rgba(44,44,44,0.85);
 }
 
 /* Footer */
@@ -74,7 +89,7 @@ footer {
   padding: 15px 25px;
   border: none;
   border-radius: 12px;
-  background: #ff4747;
+  background: rgba(255, 71, 71, 0.8);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -82,5 +97,5 @@ footer {
 }
 
 #seeAll:hover {
-  background: #e63b3b;
+  background: rgba(230, 59, 59, 0.9);
 }
