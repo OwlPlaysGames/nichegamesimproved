@@ -3,26 +3,25 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 25px;
-  justify-content: center; /* center the entire grid horizontally */
-  align-items: stretch;   /* make cards same height */
+  justify-content: center;
   width: 100%;
-  padding: 0 20px;
 }
 
-/* Game card */
+/* Game card: box style */
 .game-card {
   background: rgba(120, 0, 180, 0.45);
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 15px;
+  height: 150px; /* fixed height for box look */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
   text-align: center;
   color: #fff;
   text-decoration: none;
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.25s ease;
 }
 
 /* Hover effect */
