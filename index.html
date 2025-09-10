@@ -4,8 +4,104 @@
   <meta charset="UTF-8">
   <title>Game Hub</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Full page background */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('your-background.jpg') no-repeat center center/cover;
+      z-index: -2;
+    }
+
+    /* Frosted glass UI container */
+    header, main, footer {
+      position: relative;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    /* Search bar */
+    #searchBar {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 15px;
+      border: none;
+      outline: none;
+      margin-bottom: 20px;
+    }
+
+    /* Sections */
+    section h2 {
+      margin-bottom: 10px;
+    }
+
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .game-card {
+      display: block;
+      padding: 15px 25px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 15px;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .game-card:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #seeAll {
+      padding: 10px 30px;
+      border: none;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.2);
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    #seeAll:hover {
+      background: rgba(255,255,255,0.35);
+    }
+  </style>
 </head>
 <body>
+  <div class="background"></div>
+
   <header>
     <h1>🎮 Game Hub</h1>
     <input type="text" id="searchBar" placeholder="Search games...">
