@@ -6,36 +6,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🎮 Game Hub</h1>
-    <input type="text" id="searchBar" placeholder="Search games...">
-  </header>
+  <div class="background"></div>
 
-  <main>
-    <section>
-      <h2>🔥 Popular</h2>
-      <div class="game-grid" id="popular">
-        <a href="games/Cuphead.html" class="game-card">Cuphead</a>
-        <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
-        <a href="games/WebFishing.html" class="game-card">Web Fishing</a>
-      </div>
-    </section>
+  <div class="main-container">
+    <header>
+      <h1>🎮 Game Hub</h1>
+      <input type="text" id="searchBar" placeholder="Search games...">
+    </header>
 
-    <section>
-      <h2>🆕 Newly Added</h2>
-      <div class="game-grid" id="new">
-        <a href="games/Cuphead.html" class="game-card">Cuphead</a>
-        <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
-      </div>
-    </section>
-  </main>
+    <main>
+      <section>
+        <h2>🔥 Popular</h2>
+        <div class="game-grid" id="popular">
+          <a href="games/Cuphead.html" class="game-card">Cuphead</a>
+          <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
+          <a href="games/WebFishing.html" class="game-card">Web Fishing</a>
+        </div>
+      </section>
 
-  <footer>
-    <button id="seeAll">See All Games</button>
-  </footer>
+      <section>
+        <h2>🆕 Newly Added</h2>
+        <div class="game-grid" id="new">
+          <a href="games/Cuphead.html" class="game-card">Cuphead</a>
+          <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <button id="seeAll">See All Games</button>
+    </footer>
+  </div>
 
   <script>
-    // Simple search filter
+    // Search filter
     const searchBar = document.getElementById('searchBar');
     searchBar.addEventListener('input', () => {
       const filter = searchBar.value.toLowerCase();
@@ -44,9 +48,9 @@
       });
     });
 
-    // See all button
+    // See All button
     document.getElementById('seeAll').addEventListener('click', () => {
-      window.location.href = "all-games.html"; // Make this page later
+      window.location.href = "all-games.html";
     });
   </script>
 </body>
