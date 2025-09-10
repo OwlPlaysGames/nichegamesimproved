@@ -1,31 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <div class="main-container">
-    <header>
-      <h1>🎮 Game Hub</h1>
-      <input type="text" id="searchBar" placeholder="Search games...">
-    </header>
+  <header>
+    <h1>🎮 Game Hub</h1>
+    <input type="text" id="searchBar" placeholder="Search games...">
+  </header>
 
-    <main>
-      <section>
-        <h2>🔥 Popular</h2>
-        <div class="game-grid" id="popular">
-          <a href="games/Cuphead.html" class="game-card">Cuphead</a>
-          <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
-          <a href="games/WebFishing.html" class="game-card">Web Fishing</a>
-        </div>
-      </section>
+  <main>
+    <section>
+      <h2>🔥 Popular</h2>
+      <div class="game-grid" id="popular">
+        <a href="games/Cuphead.html" class="game-card">Cuphead</a>
+        <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
+        <a href="games/WebFishing.html" class="game-card">Web Fishing</a>
+      </div>
+    </section>
 
-      <section>
-        <h2>🆕 Newly Added</h2>
-        <div class="game-grid" id="new">
-          <a href="games/Cuphead.html" class="game-card">Cuphead</a>
-          <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
-        </div>
-      </section>
-    </main>
+    <section>
+      <h2>🆕 Newly Added</h2>
+      <div class="game-grid" id="new">
+        <a href="games/Cuphead.html" class="game-card">Cuphead</a>
+        <a href="games/Supermarket 3D.html" class="game-card">Supermarket 3D</a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <button id="seeAll">See All Games</button>
-    </footer>
-  </div>
+  <footer>
+    <button id="seeAll">See All Games</button>
+  </footer>
+
+  <script>
+    // Simple search filter
+    const searchBar = document.getElementById('searchBar');
+    searchBar.addEventListener('input', () => {
+      const filter = searchBar.value.toLowerCase();
+      document.querySelectorAll('.game-card').forEach(card => {
+        card.style.display = card.textContent.toLowerCase().includes(filter) ? '' : 'none';
+      });
+    });
+
+    // See all button
+    document.getElementById('seeAll').addEventListener('click', () => {
+      window.location.href = "all-games.html"; // Make this page later
+    });
+  </script>
 </body>
+</html>
