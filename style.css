@@ -115,32 +115,56 @@ section h2 {
   text-shadow: 0 0 5px #d97eff;
 }
 
-/* Game grid: horizontal alignment for Popular */
-.game-grid {
-  display: flex;           /* horizontal layout */
-  flex-direction: row;     
-  gap: 20px;              
-  justify-content: center; 
-  flex-wrap: nowrap;       /* keep in single row */
-  overflow-x: auto;        /* horizontal scroll if needed */
+/* Popular section: horizontal scroll + images above text */
+#popular {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;       /* single row, horizontal scroll */
+  overflow-x: auto;
   padding: 10px 0;
 }
 
+/* Popular game cards with images */
+#popular .game-card {
+  display: flex;
+  flex-direction: column;  /* stack image above text */
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;      /* smaller padding */
+  width: 140px;            /* fixed width */
+  height: auto;            /* height adjusts */
+}
+
+#popular .game-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+#popular .game-card span {
+  font-size: 0.95em;
+  text-align: center;
+}
+
 /* Optional: scrollbar styling */
-.game-grid::-webkit-scrollbar {
+#popular::-webkit-scrollbar {
   height: 8px;
 }
 
-.game-grid::-webkit-scrollbar-thumb {
+#popular::-webkit-scrollbar-thumb {
   background: rgba(200,0,255,0.5);
   border-radius: 10px;
 }
 
-.game-grid::-webkit-scrollbar-track {
+#popular::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Game card */
+/* General Game card styling (applies to all cards) */
 .game-card {
   background: rgba(120,0,180,0.4);
   padding: 20px;
