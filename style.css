@@ -115,7 +115,7 @@ section h2 {
   text-shadow: 0 0 5px #d97eff;
 }
 
-/* Game grid: horizontal alignment */
+/* Game grid: horizontal alignment for Popular */
 .game-grid {
   display: flex;           /* horizontal layout */
   flex-direction: row;     
@@ -184,9 +184,13 @@ footer {
   box-shadow: 0 0 15px #d97eff, 0 0 25px #a832f8;
 }
 
-
-
-
-
-
-
+/* Newly Added game grid: wrap to next row */
+#new {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;      /* allows wrapping to next line */
+  gap: 20px;            /* spacing between buttons */
+  justify-content: center; 
+  padding: 10px 0;
+  overflow-x: visible;  /* no horizontal scroll */
+}
