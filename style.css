@@ -14,7 +14,8 @@ body, html {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  background: radial-gradient(circle at center, #1a0024, #2b0b3f, #3e0b4f);
+  background: url('images/') no-repeat center center;
+  background-size: cover;
 }
 
 /* Dynamic stars background */
@@ -181,3 +182,4 @@ footer {
   background: rgba(255,0,255,0.8);
   box-shadow: 0 0 15px #d97eff, 0 0 25px #a832f8;
 }
+
