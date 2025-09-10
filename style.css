@@ -68,6 +68,13 @@ header h1 {
   margin-bottom: 15px;
 }
 
+  header h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0 0 10px #a832f8, 0 0 20px #d97eff;
+    margin-bottom: 15px;
+  }
+
 #searchBar {
   width: 60%;
   max-width: 500px;
@@ -218,3 +225,4 @@ footer {
   padding: 10px 0;
   overflow-x: visible;  /* no horizontal scroll */
 }
+
