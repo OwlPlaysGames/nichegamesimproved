@@ -68,12 +68,12 @@ header h1 {
   margin-bottom: 15px;
 }
 
-  header h2 {
-    font-size: 1.5em;
-    color: #fff;
-    text-shadow: 0 0 10px #a832f8, 0 0 20px #d97eff;
-    margin-bottom: 15px;
-  }
+header h2 {
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: 0 0 10px #a832f8, 0 0 20px #d97eff;
+  margin-bottom: 15px;
+}
 
 #searchBar {
   width: 60%;
@@ -226,7 +226,92 @@ footer {
   overflow-x: visible;  /* no horizontal scroll */
 }
 
+/* ============================= */
+/* Responsive Design Layer       */
+/* ============================= */
 
+/* Tablets / small laptops */
+@media (max-width: 900px) {
+  .main-container {
+    padding: 20px;
+    width: 95vw;
+  }
 
+  header h1 {
+    font-size: 2em;
+  }
 
+  header h2 {
+    font-size: 1.2em;
+  }
 
+  #searchBar {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  #popular {
+    gap: 15px;
+  }
+
+  #popular .game-card {
+    width: 120px;
+  }
+
+  #popular .game-card img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .main-container {
+    min-height: auto;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  header h2 {
+    font-size: 1em;
+  }
+
+  #searchBar {
+    width: 95%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  section h2 {
+    font-size: 1.3em;
+  }
+
+  #popular {
+    flex-wrap: wrap;   /* switch from horizontal scroll to grid */
+    justify-content: center;
+  }
+
+  #popular .game-card {
+    width: 100px;
+    padding: 8px;
+  }
+
+  #popular .game-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  #popular .game-card span {
+    font-size: 0.85em;
+  }
+
+  #seeAll {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
