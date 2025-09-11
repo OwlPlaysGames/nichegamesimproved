@@ -10,12 +10,13 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: 'Arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow-x: hidden;
+  overflow-y: auto; /* allow scrolling */
   background: url('/Images/bryan-goff-RF4p4rTM-2s-unsplash.jpg') no-repeat center center;
   background-size: cover;
+
+  /* stack content top-down instead of centering everything */
+  display: block;
 }
 
 /* Dynamic stars background */
@@ -315,4 +316,5 @@ footer {
     font-size: 14px;
   }
 }
+
 
